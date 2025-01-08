@@ -21,6 +21,19 @@ Clone Repo into a empty folder and open that folder in your editor
 
 Run the command `npm install`
 
+* If you run into npm error "Invalid property "node"" after running the 'npm install' command, see below:
+
+  The packaged boilerplate uses a deprecated format that is similar to engines, the specified versions below imply when it was added:
+
+  "devEngines": {
+    "node": ">=16.x",
+    "npm": ">=8.x"
+  },
+
+  A different format is expected for devEngines in older NPM versions. It cannot be ignored with --force, which will work only for the supported format.
+
+  A quick fix is to rename "devEngines" to "engines" in package.json, since it doesn't serve a practical purpose with the newer versions.
+
 ### Step 4 (Development)
 
 Run command `npm run build-dll`
