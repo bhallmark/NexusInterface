@@ -269,7 +269,7 @@
     "unzip-stream": "^0.3.1",
     "victory": "^36.6.11"
   },
-  "devEngines": {
+  "engines": {
     "node": ">=16.x",
     "npm": ">=8.x"
   },
